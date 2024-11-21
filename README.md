@@ -66,6 +66,8 @@ Este projeto busca validar o aprendizado dos seguintes conceitos do Angular:
    - Testar o sistema para garantir que todas as funcionalidades estão operando corretamente.
 
 ---
+## **Link de interface para orientação**
+https://www.figma.com/design/6f9Zh1gWVbjQ5lWGcUPUNR/Untitled?node-id=0-1&t=dR4qW5PZkfq7kUeN-1
 
 ## **Benefícios do Projeto**
 - Compreensão prática dos conceitos fundamentais do Angular.
