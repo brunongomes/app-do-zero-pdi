@@ -1,6 +1,6 @@
 <div class="container">
     <button id="btn-add-task" (click)="addTask()">ADICIONAR</button>
-    <table>
+    <table *ngIf="tasks.length > 0">
         <thead>
           <tr>
             <th></th>
