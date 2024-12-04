@@ -49,9 +49,23 @@ input[type="checkbox"]:checked ~ td {
 }
 
 tbody tr:hover {
-    background-color: #b6b5b5;
+    background-color: #e2e1e1;
 }
 
 .completed {
     background-color: #b6b5b5;
 }
+
+.no-tasks-message {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #686666;
+    width: 80%;
+    margin: 20px auto;
+}
+  
