@@ -1,0 +1,57 @@
+#btn-add-task {
+    background-color: #4EC729;
+    border: none;           
+    width: 145px;           
+    height: 27px;           
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0;             
+    box-sizing: border-box; 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#btn-add-task:hover {
+    background-color: #348f19;
+}
+
+#btn-remove-task {
+    width: 20px;
+    height: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    font-family: 'Arial', sans-serif;
+}
+
+th, td {
+    font-family: 'Verdana', sans-serif;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked ~ td {
+    background-color: #f0f0f0;
+}
+
+tbody tr:hover {
+    background-color: #b6b5b5;
+}
+
+.completed {
+    background-color: #b6b5b5;
+}

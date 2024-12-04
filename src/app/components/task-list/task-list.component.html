@@ -1,5 +1,5 @@
 <div class="container">
-    <button (click)="addTask()">Adicionar</button>
+    <button id="btn-add-task" (click)="addTask()">ADICIONAR</button>
     <table>
         <thead>
           <tr>
@@ -10,12 +10,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let task of tasks; let i = index">
-            <td><input type="checkbox"></td>
+          <tr *ngFor="let task of tasks; let i = index" [ngClass]="{'completed': task.isChecked}">
+            <td><input type="checkbox" (change)="onCheckboxChange(i)" [checked]="task.isChecked"></td>
             <td>{{ task.title }}</td>
             <td>{{ task.prevision }}</td>
             <td>
-                <button (click)="removeTask(i)">
+                <button id="btn-remove-task-{{i}}" (click)="removeTask(i)">
                     <img src="assets/icons/btn_delete.png" alt="Deletar" width="20" height="20">
                 </button>
             </td>
