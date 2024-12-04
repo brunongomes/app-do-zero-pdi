@@ -10,10 +10,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let tarefa of tarefas; let i = index">
+          <tr *ngFor="let task of tasks; let i = index">
             <td><input type="checkbox"></td>
-            <td>{{ tarefa.titulo }}</td>
-            <td>{{ tarefa.previsao }}</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.prevision }}</td>
             <td>
                 <button (click)="removeTask(i)">
                     <img src="assets/icons/btn_delete.png" alt="Deletar" width="20" height="20">
