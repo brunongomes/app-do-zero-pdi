@@ -1,5 +1,5 @@
 <div class="container">
-    <button>Adicionar</button>
+    <button (click)="addTask()">Adicionar</button>
     <table>
         <thead>
           <tr>
@@ -10,22 +10,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let tarefa of tarefas; let i = index">
             <td><input type="checkbox"></td>
-            <td>FINALIZAR ATIVIDADE 1</td>
-            <td>23/11/2024</td>
+            <td>{{ tarefa.titulo }}</td>
+            <td>{{ tarefa.previsao }}</td>
             <td>
-                <button>
-                    <img src="assets/icons/btn_delete.png" alt="Deletar" width="20" height="20">
-                </button>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>FINALIZAR ATIVIDADE 1</td>
-            <td>23/11/2024</td>
-            <td>
-                <button>
+                <button (click)="removeTask(i)">
                     <img src="assets/icons/btn_delete.png" alt="Deletar" width="20" height="20">
                 </button>
             </td>
