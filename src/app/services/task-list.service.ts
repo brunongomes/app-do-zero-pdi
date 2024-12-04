@@ -7,12 +7,12 @@ import { Task } from './task';
 })
 export class TaskListService {
   tasks = [
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
-    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024' },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
   ]
 
   constructor() { }
