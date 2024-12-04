@@ -1,4 +1,4 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { TaskListService } from '../../services/task-list.service';
 import { Task } from '../../services/task';
@@ -8,7 +8,8 @@ import { Task } from '../../services/task';
   standalone: true,
   imports: [
     NgFor,
-    NgClass
+    NgClass,
+    NgIf
   ],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'
@@ -24,7 +25,7 @@ export class TaskListComponent {
 
   addTask(): void {
     const newTask: Task = {
-      title: 'NOVA ATIVIDADE',
+      title: 'FINALIZAR ATIVIDADE 1',
       prevision: '23/11/2024',
       isChecked: false
     };
