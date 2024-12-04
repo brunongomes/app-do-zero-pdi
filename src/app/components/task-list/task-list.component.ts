@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { TaskServiceService } from '../../services/task-service.service';
+import { TaskListService } from '../../services/task-list.service';
 import { Task } from '../../services/task';
 
 @Component({
@@ -15,7 +15,7 @@ import { Task } from '../../services/task';
 export class TaskListComponent {
   tasks: Task[] = [];
 
-  constructor(private taskService: TaskServiceService) { }
+  constructor(private taskService: TaskListService) { }
 
   ngOnInit():void {
     this.taskService.getTasks().subscribe(data => this.tasks = data);
