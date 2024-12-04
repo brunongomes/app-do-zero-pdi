@@ -13,6 +13,13 @@ export class TaskListService {
     { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
     { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
     { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: false },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
+    { title: 'FINALIZAR ATIVIDADE 1', prevision: '23/11/2024', isChecked: true },
   ]
 
   constructor() { }
