@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    align-items: center; /* Alinha o conteúdo à direita */
+    flex-direction: column;
+    align-items: center;
 }
 
 #btn-add-task {
@@ -26,11 +26,6 @@
 
 #btn-add-task:hover {
     background-color: #348f19;
-}
-
-#btn-remove-task {
-    width: 20px;
-    height: 20px;
 }
 
 table {
