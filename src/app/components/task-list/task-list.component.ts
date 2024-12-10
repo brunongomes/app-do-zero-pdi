@@ -2,6 +2,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { TaskListService } from '../../services/task-list.service';
 import { Task } from '../../services/task';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-task-list',
@@ -9,7 +10,8 @@ import { Task } from '../../services/task';
   imports: [
     NgFor,
     NgClass,
-    NgIf
+    NgIf,
+    MatIconModule
   ],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'

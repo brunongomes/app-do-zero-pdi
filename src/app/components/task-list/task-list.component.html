@@ -16,7 +16,9 @@
             <td>{{ task.prevision }}</td>
             <td>
                 <button id="btn-remove-task-{{i}}" (click)="removeTask(i)">
-                    <img src="assets/icons/btn_delete.png" alt="Deletar" width="20" height="20">
+                    <mat-icon><span class="material-symbols-outlined">
+                      delete
+                    </span></mat-icon>
                 </button>
             </td>
           </tr>
