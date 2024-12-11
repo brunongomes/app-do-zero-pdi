@@ -22,9 +22,9 @@ export class TaskListComponent {
   displayedColumns: string[] = ['isChecked', 'id', 'title', 'prevision', 'delete'];
   tasks: Task[] = [];
   dataSource: Task[] = [];
-
+  
   constructor(private taskService: TaskListService) { }
-
+  
   ngOnInit():void {
     this.taskService.getTasks().subscribe(data => {
       this.tasks = data
@@ -58,7 +58,11 @@ export class TaskListComponent {
     });
   }
 
-  onCheckboxChange(index: number) {
-    this.tasks[index].isChecked = !this.tasks[index].isChecked;
+  onCheckboxChange(taskId: number) {
+    const task = this.tasks.find(t => t.id === taskId);
+    if (task) {
+      task.isChecked = !task.isChecked;
+      this.taskService.updateTask(task).subscribe();
+    }
   }
 }
