@@ -25,19 +25,23 @@ export class TaskListComponent {
     this.taskService.getTasks().subscribe(data => this.tasks = data);
   }
 
-  addTask(): void {
+  addTask() {
     const newTask: Task = {
       title: 'FINALIZAR ATIVIDADE 1',
       prevision: '23/11/2024',
       isChecked: false
     };
-    this.taskService.addTask(newTask);
-    this.updateTasks();
+    this.taskService.addTask(newTask).subscribe(() => {
+      this.updateTasks();
+    });
   }
 
-  removeTask(index: number): void {
-    this.taskService.removeTask(index);
-    this.updateTasks();
+  removeTask(taskId: number) {
+    if (taskId !== undefined) {
+      this.taskService.removeTask(taskId).subscribe(() => {
+        this.updateTasks();
+      });
+    }
   }
 
   private updateTasks(): void {
