@@ -73,3 +73,27 @@ https://www.figma.com/design/6f9Zh1gWVbjQ5lWGcUPUNR/Untitled?node-id=0-1&t=dR4qW
 - Compreensão prática dos conceitos fundamentais do Angular.
 - Exercício de boas práticas no desenvolvimento de aplicações front-end.
 - Criação de uma aplicação funcional que pode ser expandida com novos recursos futuramente.
+
+## **Iniciar**
+
+### **frontend**
+```bash
+npm install
+```
+
+```bash
+npm start
+```
+
+### **backend**
+```bash
+cd backend
+```
+
+```bash
+npm install
+```
+
+```bash
+npm start
+```
