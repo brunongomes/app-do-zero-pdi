@@ -1,5 +1,7 @@
 <div class="container">
-    <button id="btn-add-task" (click)="addTask()">ADICIONAR</button>
+    <!-- <button id="btn-add-task" (click)="addTask()">ADICIONAR</button> -->
+    <app-task-registration-modal #taskModal (saveTask)="addTask($event)"></app-task-registration-modal>
+    <button (click)="taskModal.open()">ADICIONAR MODAL</button>
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="tasks.length > 0">
         <ng-container matColumnDef="isChecked">
           <th mat-header-cell *matHeaderCellDef> </th>
