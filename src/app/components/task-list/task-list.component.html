@@ -22,11 +22,20 @@
           <th mat-header-cell *matHeaderCellDef> TÍTULO </th>
           <td mat-cell *matCellDef="let element"> {{element.title}} </td>
         </ng-container>
-      
+        
         <ng-container matColumnDef="prevision">
           <th mat-header-cell *matHeaderCellDef> PREVISÃO </th>
-          <td mat-cell *matCellDef="let element"> {{element.prevision}} </td>
+          <td mat-cell *matCellDef="let element"> {{ element.prevision | date:'dd-MM-yyyy' }} </td>
         </ng-container>
+
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <button (click)="editTask(element)">
+              <mat-icon><span class="material-symbols-outlined">edit</span></mat-icon>
+            </button>
+          </td>
+        </ng-container>        
 
         <ng-container matColumnDef="delete">
           <th mat-header-cell *matHeaderCellDef> </th>

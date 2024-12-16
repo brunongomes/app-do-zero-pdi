@@ -1,4 +1,4 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { TaskListService } from '../../services/task-list.service';
 import { Task } from '../../services/task';
@@ -10,9 +10,7 @@ import { TaskRegistrationModalComponent } from '../task-registration-modal/task-
   selector: 'app-task-list',
   standalone: true,
   imports: [
-    NgFor,
-    NgClass,
-    NgIf,
+    CommonModule,
     MatIconModule,
     MatTableModule,
     TaskRegistrationModalComponent
@@ -21,7 +19,7 @@ import { TaskRegistrationModalComponent } from '../task-registration-modal/task-
   styleUrl: './task-list.component.css'
 })
 export class TaskListComponent {
-  displayedColumns: string[] = ['isChecked', 'id', 'title', 'prevision', 'delete'];
+  displayedColumns: string[] = ['isChecked', 'id', 'title', 'prevision', 'edit', 'delete'];
   tasks: Task[] = [];
   dataSource: Task[] = [];
 
@@ -39,23 +37,34 @@ export class TaskListComponent {
   addTask(task: Task) {
     const newTask: Task = {
       title: task.title.toUpperCase(),
-      prevision: new Date(task.prevision).toLocaleDateString(),
+      prevision: task.prevision,
       isChecked: task.isChecked
     };
-    this.taskService.addTask(newTask).subscribe(() => {
-      this.updateTasks();
-    });
+    if (!task.isEdit) {
+      this.taskService.addTask(newTask).subscribe(() => {
+        this.updateTaskList();
+      });
+    } else {
+      newTask.id = task.id;
+      this.taskService.updateTask(newTask).subscribe(() => {
+        this.updateTaskList();
+      });
+    }
   }
 
   removeTask(taskId: number) {
     if (taskId !== undefined) {
       this.taskService.removeTask(taskId).subscribe(() => {
-        this.updateTasks();
+        this.updateTaskList();
       });
     }
   }
 
-  private updateTasks(): void {
+  editTask(task: Task) {
+    this.taskModal.openForEdit(task)
+  }
+  
+  private updateTaskList(): void {
     this.taskService.getTasks().subscribe((data) => {
       this.tasks = data;
       this.dataSource = [...this.tasks];
